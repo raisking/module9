@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Sniglet');
+*html{
+    font-family: 'Sniglet', cursive;
+}
+h1{
+    color: blue;
+    font-family: 'Sniglet', cursive;
+}
