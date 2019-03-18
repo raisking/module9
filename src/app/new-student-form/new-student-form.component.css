@@ -1,0 +1,15 @@
+h3,button{
+    font-family: 'Sniglet', cursive;
+    font-size: 1.2em;
+}
+
+button{
+    background-color: aquamarine;
+}
+
+div{
+    border: 1px solid #ccc;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
