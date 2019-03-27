@@ -35,8 +35,8 @@ export class StudentService {
     updateStudent(studentId: string, firstName: string, lastName: string, address: string) {
         //request path http://localhost:8000/students/5xbd456xx 
         //first and last names will be send as HTTP body parameters 
-        this.http.put("http://localhost:8000/students/"
-            + studentId, { firstName, lastName, address })
+        this.http.put("http://localhost:8000/students/" 
+        + studentId, { firstName, lastName, address })
             .subscribe(() => {
                 console.log('Updated: ' + studentId);
             });
