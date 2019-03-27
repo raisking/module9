@@ -1,11 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="container" style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <app-navigation-menu></app-navigation-menu>
+  <router-outlet></router-outlet>
+  <!--
   <div>
-    <ul *ngFor ="let student of students let i = index">
-      <li> {{student.id}}: {{student.firstName}} {{student.lastName}} (index {{i}})</li>
+    <ul *ngFor="let student of students let i = index">
+      <li> {{student.id}}(index {{i}}): {{student.firstName}} {{student.lastName}}, {{student.address}}
+        <button mat-button color="warn" (click)="onDelete(student._id)">DELETE</button>
+      </li>
+
     </ul>
   </div>
-  <app-new-student-form></app-new-student-form> 
+  <div>
+    <app-new-student-form></app-new-student-form>
+  </div>
+  -->
+</div>

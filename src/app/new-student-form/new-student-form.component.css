@@ -1,15 +1,21 @@
-h3,button{
+h3, button {
     font-family: 'Sniglet', cursive;
     font-size: 1.2em;
 }
 
-button{
-    background-color: aquamarine;
+button {
+    background-color: #ccc;
 }
 
-div{
+button:hover {
+    background-color: #fff;
+}
+
+div {
     border: 1px solid #ccc;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px 1px #ccc;
 }

@@ -1,11 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Sniglet');
-
-h1{
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+h1 {
     color: blue;
-    font-family: 'Sniglet', cursive;
+    font-family: 'Raleway', sans-serif;
 }
-li{
+
+li {
     color: blue;
-    list-style-type:none;
-    font-family: 'Sniglet', cursive;
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+    border: 1px solid red;
+    background-color: crimson;
+    color: #fff;
+}
+
+button:hover {
+    background-color: red;
+}
+
+.container {
+    border: 1px solid #ccc;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }

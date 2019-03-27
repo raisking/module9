@@ -1,18 +1,17 @@
 <div>
-  <h3>New Student Form</h3>
+  <h3>Student Registration</h3>
   <form (ngSubmit)="onSubmit()" #myForm="ngForm">
-    <mat-form-field >
-      <input matInput placeholder="First Name" id="firstname" [(ngModel)]=" firstName" name="firstname" >
+    <mat-form-field>
+      <input matInput placeholder="First Name" id="firstname" [(ngModel)]=" firstName" name="firstname">
     </mat-form-field>
-  
-    <mat-form-field >
-      <input matInput placeholder="Last Name" id="lastname" [(ngModel)]=" lastName" name="lastname" >
+    <mat-form-field>
+      <input matInput placeholder="Last Name" id="lastname" [(ngModel)]=" lastName" name="lastname">
     </mat-form-field>
-  
+    <mat-form-field>
+      <input matInput placeholder="Address" id="address" [(ngModel)]=" address" name="address">
+    </mat-form-field>
     <p>
-  
       <button type="submit" mat-stroked-button>Submit</button>
     </p>
   </form>
-  </div>
-  
+</div>
