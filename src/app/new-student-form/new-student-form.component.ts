@@ -18,11 +18,12 @@ export class NewStudentFormComponent implements OnInit {
 
   onSubmit() {
     console.log("You submitted: " + this.firstName + " " + this.lastName + " " + this.address);
+    // this._myService.addStudents(this.firstName, this.lastName, this.address);
     if (this.mode == 'add')
       this._myService.addStudents(this.firstName, this.lastName, this.address);
     if (this.mode == 'edit')
       this._myService.updateStudent(this.id, this.firstName, this.lastName, this.address);
-    this.router.navigate(['../listStudents']);
+    this.router.navigate(['/listStudents']);
   }
   //initialize the call using StudentService 
   constructor(private _myService: StudentService, private router: Router, public route: ActivatedRoute) { }
