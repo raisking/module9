@@ -1,15 +1,35 @@
-<div>
-  <ul *ngFor="let student of students let i = index">
-    <h3>test</h3>
-    <li> {{student._id}} {{student.firstName}}
-      {{student.lastName}}, {{student.address}} (index {{i}}):
-      <button mat-button color="warn" (click)="onDelete(student._id)">DELETE</button>
-      <button mat-button color="accent" [routerLink]="['/editStudent', student._id]">UPDATE</button>
+<div class="info">
+  <h1>User Information</h1>
+</div>
+<div class="main">
 
+  <ul *ngFor="let student of students let i = index">
+    <li class="studentList">
+      <ul>
+        <li>
+          ID: {{student._id}}
+        </li>
+        <li>
+          First Name: {{student.firstName}}
+        </li>
+
+        <li>
+          Last Name: {{student.lastName}}
+        </li>
+        <li>
+          Location: {{student.address}}
+        </li>
+      </ul>
+      <div>
+        <button mat-button color="warn" (click)="onDelete(student._id)">Delete</button>
+        <button mat-button color="accent" [routerLink]="['/editStudent', student._id]">Update</button>
+      </div>
     </li>
 
   </ul>
 </div>
+
+
 <div>
   <!-- <app-new-student-form></app-new-student-form> -->
 </div>

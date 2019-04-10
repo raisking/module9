@@ -1,12 +1,37 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-
 const mongoose = require('mongoose');
 //specify where to find the schema
 const Student = require('./models/student')
+const MongoClient = require('mongodb').MongoClient;
+
+// replace the uri string with your connection string.
+// const uri = "mongodb+srv://prai:Dikhuppa123@it6203-plblu.mongodb.net/test?retryWrites=true"
+// MongoClient.connect(uri, function (err, client) {
+//   if (err) {
+//     console.log('Error occurred while connecting to MongoDB Atlas...\n', err);
+//   }
+//   console.log('Connected...');
+//   const collection = client.db("it6203").collection("users");
+//   console.log('data inserted');
+//   // perform actions on the collection object
+//   client.close();
+// });
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://prai:Dikhuppa123@it6203-plblu.mongodb.net/test?retryWrites=true";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("it6203").collection("users");
+//   console.log('connected')
+//   // perform actions on the collection object
+//   client.close();
+// });
+
 // connect and display the status 
-mongoose.connect('mongodb://localhost:27017/IT6203', { useNewUrlParser: true })
+const uri = "mongodb+srv://prai:Dikhuppa123@it6203-plblu.mongodb.net/test?retryWrites=true";
+mongoose.connect(uri, { useNewUrlParser: true })
   .then(() => { console.log("connected"); })
   .catch(() => { console.log("error connecting"); });
 
@@ -31,7 +56,6 @@ app.get('/students', (req, res, next) => {
 });
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-
 // parse application/json
 app.use(bodyParser.json())
 // serve incoming post requests to /students
@@ -72,7 +96,8 @@ app.put('/students/:id', (req, res, next) => {
           lastName: req.body.lastName,
           address: req.body.address
         }
-      }, { new: true })
+      }, 
+      { new: true })
       .then((student) => {
         if (student) { //what was updated
           console.log(student);

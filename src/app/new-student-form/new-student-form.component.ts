@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { StudentService } from '../student.service';
-import { Router } from '@angular/router';
+import { Router } from "@angular/router";
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
@@ -17,14 +17,16 @@ export class NewStudentFormComponent implements OnInit {
 
 
   onSubmit() {
-    console.log("You submitted: " + this.firstName + " " + this.lastName + " " + this.address);
+    this.router.navigate(['/listStudents']);
+    // console.log("You submitted: " + this.firstName + " " + this.lastName + " " + this.address);
     // this._myService.addStudents(this.firstName, this.lastName, this.address);
     if (this.mode == 'add')
       this._myService.addStudents(this.firstName, this.lastName, this.address);
     if (this.mode == 'edit')
       this._myService.updateStudent(this.id, this.firstName, this.lastName, this.address);
-    this.router.navigate(['/listStudents']);
+
   }
+
   //initialize the call using StudentService 
   constructor(private _myService: StudentService, private router: Router, public route: ActivatedRoute) { }
 

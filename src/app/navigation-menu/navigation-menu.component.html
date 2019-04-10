@@ -1,4 +1,4 @@
-<div>
+<div class="navbar">
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
     <span>Menu</span>
@@ -6,8 +6,10 @@
 
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/listStudents">
-      <span>List Students</span>
+      <span>User List</span>
     </button>
     <button mat-menu-item routerLink="/addStudent">
-      <span>Add Student</span>
+      <span>Add User</span>
     </button>
+  </mat-menu>
+</div>

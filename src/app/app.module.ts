@@ -19,7 +19,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const appRoutes: Routes = [{
   path: '',                     //default component to display
   component: ListStudentsComponent
-}, 
+},
 {
   path: 'addStudent',         //when students added 
   component: NewStudentFormComponent
@@ -31,7 +31,7 @@ const appRoutes: Routes = [{
 {
   path: 'listStudents',       //when students listed
   component: ListStudentsComponent
-}, 
+},
 {
   path: '**',                 //when path cannot be found
   component: NotFoundComponent
