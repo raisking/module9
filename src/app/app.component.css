@@ -12,6 +12,8 @@ h1 {
 .container {
     display: flex;
     margin: -8px;
+    background-color: #1abc9c;
+    border-bottom: 4px solid #000;
 }
 
 .nav-bar {

@@ -13,6 +13,7 @@ h3, button {
 button {
     background-color: #ccc;
     margin: 5px;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -23,17 +24,26 @@ button:hover {
 .main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .studentList {
-    border: 1px solid #487eb0;
-    box-shadow: 2px 2px 2px 2px rgb(16, 130, 195);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     width: auto;
-    padding: 50px;
-    background-color: #40739e;
+    padding: 40px;
+    background-color: #1abc9c;
 }
 
 h1 {
     font-family: 'Roboto Slab', serif;
     text-align: center;
+}
+
+.delete {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.delete:hover {
+    background-color: #c0392b;
 }
