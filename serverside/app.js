@@ -6,28 +6,6 @@ const mongoose = require('mongoose');
 const Student = require('./models/student')
 const MongoClient = require('mongodb').MongoClient;
 
-// replace the uri string with your connection string.
-// const uri = "mongodb+srv://prai:Dikhuppa123@it6203-plblu.mongodb.net/test?retryWrites=true"
-// MongoClient.connect(uri, function (err, client) {
-//   if (err) {
-//     console.log('Error occurred while connecting to MongoDB Atlas...\n', err);
-//   }
-//   console.log('Connected...');
-//   const collection = client.db("it6203").collection("users");
-//   console.log('data inserted');
-//   // perform actions on the collection object
-//   client.close();
-// });
-
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = "mongodb+srv://prai:Dikhuppa123@it6203-plblu.mongodb.net/test?retryWrites=true";
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-// client.connect(err => {
-//   const collection = client.db("it6203").collection("users");
-//   console.log('connected')
-//   // perform actions on the collection object
-//   client.close();
-// });
 
 // connect and display the status 
 const uri = "mongodb+srv://prai:Dikhuppa123@it6203-plblu.mongodb.net/test?retryWrites=true";
@@ -96,7 +74,7 @@ app.put('/students/:id', (req, res, next) => {
           lastName: req.body.lastName,
           address: req.body.address
         }
-      }, 
+      },
       { new: true })
       .then((student) => {
         if (student) { //what was updated

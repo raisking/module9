@@ -1,6 +1,7 @@
 
-To run:
+To run Angular Js
 ng serve 
+To run 
 nodemon webserver.js
 
 # Module9Lab
